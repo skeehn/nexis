@@ -1,0 +1,233 @@
+{
+  "total_tests": 25,
+  "passed": 23,
+  "failed": 2,
+  "avg_latency_ms": 62.50857270282248,
+  "results": [
+    {
+      "endpoint": "/v1/health",
+      "method": "GET",
+      "status_code": 200,
+      "latency_ms": 66.6,
+      "success": true,
+      "response_size": 296,
+      "error": null
+    },
+    {
+      "endpoint": "/v1/scrape",
+      "method": "POST",
+      "status_code": 200,
+      "latency_ms": 157.2,
+      "success": true,
+      "response_size": 1115,
+      "error": null
+    },
+    {
+      "endpoint": "/v1/vsb",
+      "method": "POST",
+      "status_code": 200,
+      "latency_ms": 11.0,
+      "success": true,
+      "response_size": 390,
+      "error": null
+    },
+    {
+      "endpoint": "/v1/metadata",
+      "method": "GET",
+      "status_code": 200,
+      "latency_ms": 5.2,
+      "success": true,
+      "response_size": 296,
+      "error": null
+    },
+    {
+      "endpoint": "/v1/scrape",
+      "method": "POST",
+      "status_code": 200,
+      "latency_ms": 416.6,
+      "success": true,
+      "response_size": 11594,
+      "error": null
+    },
+    {
+      "endpoint": "/v1/vsb",
+      "method": "POST",
+      "status_code": 200,
+      "latency_ms": 12.7,
+      "success": true,
+      "response_size": 395,
+      "error": null
+    },
+    {
+      "endpoint": "/v1/metadata",
+      "method": "GET",
+      "status_code": 200,
+      "latency_ms": 8.1,
+      "success": true,
+      "response_size": 289,
+      "error": null
+    },
+    {
+      "endpoint": "/v1/scrape",
+      "method": "POST",
+      "status_code": 200,
+      "latency_ms": 225.1,
+      "success": true,
+      "response_size": 54747,
+      "error": null
+    },
+    {
+      "endpoint": "/v1/vsb",
+      "method": "POST",
+      "status_code": 200,
+      "latency_ms": 11.6,
+      "success": true,
+      "response_size": 413,
+      "error": null
+    },
+    {
+      "endpoint": "/v1/metadata",
+      "method": "GET",
+      "status_code": 200,
+      "latency_ms": 5.5,
+      "success": true,
+      "response_size": 1046,
+      "error": null
+    },
+    {
+      "endpoint": "/v1/batch",
+      "method": "POST",
+      "status_code": 200,
+      "latency_ms": 444.0,
+      "success": true,
+      "response_size": 109797,
+      "error": null
+    },
+    {
+      "endpoint": "/v1/search-index",
+      "method": "GET",
+      "status_code": 200,
+      "latency_ms": 7.9,
+      "success": true,
+      "response_size": 77,
+      "error": null
+    },
+    {
+      "endpoint": "/v1/neural-index",
+      "method": "POST",
+      "status_code": 200,
+      "latency_ms": 8.2,
+      "success": true,
+      "response_size": 77,
+      "error": null
+    },
+    {
+      "endpoint": "/v1/hybrid-search",
+      "method": "POST",
+      "status_code": 200,
+      "latency_ms": 5.4,
+      "success": true,
+      "response_size": 147,
+      "error": null
+    },
+    {
+      "endpoint": "/v1/search-index",
+      "method": "GET",
+      "status_code": 200,
+      "latency_ms": 5.3,
+      "success": true,
+      "response_size": 74,
+      "error": null
+    },
+    {
+      "endpoint": "/v1/neural-index",
+      "method": "POST",
+      "status_code": 200,
+      "latency_ms": 5.2,
+      "success": true,
+      "response_size": 74,
+      "error": null
+    },
+    {
+      "endpoint": "/v1/hybrid-search",
+      "method": "POST",
+      "status_code": 200,
+      "latency_ms": 5.3,
+      "success": true,
+      "response_size": 144,
+      "error": null
+    },
+    {
+      "endpoint": "/v1/search-index",
+      "method": "GET",
+      "status_code": 200,
+      "latency_ms": 5.3,
+      "success": true,
+      "response_size": 76,
+      "error": null
+    },
+    {
+      "endpoint": "/v1/neural-index",
+      "method": "POST",
+      "status_code": 200,
+      "latency_ms": 5.2,
+      "success": true,
+      "response_size": 76,
+      "error": null
+    },
+    {
+      "endpoint": "/v1/hybrid-search",
+      "method": "POST",
+      "status_code": 200,
+      "latency_ms": 5.9,
+      "success": true,
+      "response_size": 146,
+      "error": null
+    },
+    {
+      "endpoint": "/v1/crawl/start",
+      "method": "POST",
+      "status_code": 200,
+      "latency_ms": 7.2,
+      "success": true,
+      "response_size": 194,
+      "error": null
+    },
+    {
+      "endpoint": "/v1/crawl/jobs",
+      "method": "GET",
+      "status_code": 200,
+      "latency_ms": 7.5,
+      "success": true,
+      "response_size": 362,
+      "error": null
+    },
+    {
+      "endpoint": "/v1/generate",
+      "method": "POST",
+      "status_code": 500,
+      "latency_ms": 5.8,
+      "success": false,
+      "response_size": 49,
+      "error": "HTTP 500"
+    },
+    {
+      "endpoint": "/v1/apis",
+      "method": "GET",
+      "status_code": 200,
+      "latency_ms": 5.8,
+      "success": true,
+      "response_size": 36,
+      "error": null
+    },
+    {
+      "endpoint": "/v1/export/cilow",
+      "method": "POST",
+      "status_code": 503,
+      "latency_ms": 5.1,
+      "success": false,
+      "response_size": 96,
+      "error": "HTTP 503"
+    }
+  ]
+}
