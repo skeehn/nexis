@@ -20,7 +20,7 @@ Scrape, search, extract, and structure web data — faster than anything else. A
 | **Scrape** | ✅ | ✅ | ✅ |
 | **Search** | ✅ | ✅ (v2) | ✅ |
 | **Search+Scrape** | **One call** | Two calls | Two calls |
-| **SDKs** | **Python/TS/Rust** | Python/Node/Go | REST only |
+| **SDKs** | **Python/TS/Rust/Go** | Python/Node/Go | REST only |
 | **Integrations** | **LangChain/LlamaIndex** | LangChain | LangChain |
 
 Markify is the **only** Apache 2.0-licensed, Rust-native, MCP-first platform that gives AI agents reliable web access with AI-powered extraction — as a single binary anyone can self-host.
@@ -190,10 +190,10 @@ Compare Markify vs Firecrawl vs Jina on the same URLs. Set `FIRECRAWL_API_KEY` a
 
 ## Docs
 
-- [Quickstart](docs/quickstart.md) — Get started in 2 minutes
-- [API Reference](docs/api-reference.md) — All endpoints and parameters
-- [MCP Setup](docs/mcp-setup.md) — Claude, Cursor, Windsurf integration
-- [Self-Hosting](docs/self-hosting.md) — Production deployment guide
+- [Quickstart](QUICKSTART.md) — Get started in 2 minutes
+- [API Reference](docs/API_EXAMPLES.md) — All endpoints and parameters
+- [MCP Setup](docs/MCP_SETUP.md) — Claude, Cursor, Windsurf integration
+- [Self-Hosting](INSTALL.md) — Production deployment guide
 
 ## Project Structure
 
@@ -211,7 +211,7 @@ markify/
 │       └── crawl/             # Crawl engine (Phase 2)
 ├── server/            # Binary: REST API + MCP + CLI
 ├── frontend/          # React web app (Processor + Landing)
-├── sdks/              # Python + TypeScript SDKs
+├── sdks/              # Python + TypeScript + Go SDKs
 ├── integrations/      # LangChain Document Loader + Tool
 ├── benchmarks/        # Reproducible vs Firecrawl/Jina
 ├── deploy/            # Docker, Fly.io, Railway
@@ -223,7 +223,7 @@ markify/
 **Shipped:**
 - ✅ REST API (scrape, search, batch, metadata)
 - ✅ MCP Server (5 tools, stdio transport)
-- ✅ Python + TypeScript SDKs
+- ✅ Python + TypeScript + Go SDKs
 - ✅ Serper search integration
 - ✅ LangChain integration
 - ✅ Telemetry + real-time health stats

@@ -1,39 +1,26 @@
+version: '3.8'
+
 services:
-  # Markify server — REST API + MCP
-  markify:
+  nexis:
     build:
       context: .
       dockerfile: Dockerfile
     ports:
       - "3000:3000"
     environment:
-      - RUST_LOG=info
       - SERPER_API_KEY=${SERPER_API_KEY:-}
-      - BIND=0.0.0.0:3000
-    restart: unless-stopped
+      - EXA_API_KEY=${EXA_API_KEY:-}
+      - PORT=3000
+      - RUST_LOG=${RUST_LOG:-info}
+    volumes:
+      - nexis-data:/data
     healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:3000/v1/health"]
+      test: ["CMD", "wget", "-qO-", "http://localhost:3000/v1/health"]
       interval: 30s
       timeout: 5s
       retries: 3
       start_period: 10s
+    restart: unless-stopped
 
-  # Redis for caching (optional — uncomment to enable)
-  # redis:
-  #   image: redis:7-alpine
-  #   ports:
-  #     - "6379:6379"
-  #   volumes:
-  #     - redis_data:/data
-  #   restart: unless-stopped
-
-  # Headless Chrome for JS-rendered pages (optional)
-  # chrome:
-  #   image: gcr.io/zenika-hub/alpine-chrome:latest
-  #   ports:
-  #     - "9222:9222"
-  #   command: --no-sandbox --remote-debugging-address=0.0.0.0 --remote-debugging-port=9222
-  #   restart: unless-stopped
-
-# volumes:
-#   redis_data:
+volumes:
+  nexis-data:
