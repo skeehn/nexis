@@ -1,0 +1,34 @@
+# Build artifacts
+target/
+**/*.rs.bk
+*.pdb
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Frontend (not included in Docker image)
+frontend/node_modules/
+frontend/dist/
+
+# SDKs
+sdks/python/.venv/
+sdks/typescript/node_modules/
+
+# Backend legacy (not used in Docker)
+backend/target/
+
+# Docker
+Dockerfile
+docker-compose*.yml
+
+# Env files
+.env
+.env.*
+!.env.example

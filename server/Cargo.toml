@@ -1,0 +1,56 @@
+[package]
+name = "nexis-server"
+version = "0.1.0"
+edition = "2021"
+description = "Markify web data layer server — REST API + MCP"
+license = "Apache-2.0"
+
+[[bin]]
+name = "nexis"
+path = "src/main.rs"
+
+[dependencies]
+nexis-core = { path = "../core" }
+
+# Server
+axum = { version = "0.7", features = ["json"] }
+tower = "0.5"
+tower-http = { version = "0.5", features = ["cors", "compression-br", "compression-gzip", "fs", "trace"] }
+
+# Async runtime
+tokio = { version = "1", features = ["full"] }
+
+# MCP protocol
+rmcp = { version = "0.1", features = ["transport-io", "transport-sse-server"] }
+
+# CLI
+clap = { version = "4", features = ["derive"] }
+
+# Serialization
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+
+# Error handling
+anyhow = "1"
+thiserror = "2"
+
+# Logging
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter", "json"] }
+
+# Utilities
+chrono = { version = "0.4", features = ["serde"] }
+uuid = { version = "1", features = ["v4"] }
+
+[features]
+default = []
+browser = ["nexis-core/browser"]
+
+[dev-dependencies]
+http-body-util = "0.1"
+hyper = { version = "1", features = ["full"] }
+scraper = "0.23"
+
+[[test]]
+name = "e2e"
+path = "../tests/e2e/integration_tests.rs"

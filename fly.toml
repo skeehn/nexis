@@ -1,0 +1,40 @@
+# fly.toml — Fly.io deployment config for Markify
+# Deploy: fly launch (first time) or fly deploy (updates)
+# Docs: https://fly.io/docs/
+
+app = 'markify'
+primary_region = 'sjc'  # San Jose (close to most US users)
+
+[build]
+  dockerfile = 'Dockerfile'
+
+[env]
+  RUST_LOG = 'info'
+  BIND = '0.0.0.0:3000'
+
+[[services]]
+  protocol = 'tcp'
+  internal_port = 3000
+
+  [[services.ports]]
+    port = 80
+    handlers = ['http']
+    force_https = true
+
+  [[services.ports]]
+    port = 443
+    handlers = ['tls', 'http']
+
+  [services.concurrency]
+    type = 'connections'
+    hard_limit = 100
+    soft_limit = 80
+
+  [[services.http_checks]]
+    interval = '15s'
+    timeout = '5s'
+    path = '/v1/health'
+    method = 'GET'
+
+# Secrets (set with: fly secrets set SERPER_API_KEY=xxx)
+# SERPER_API_KEY
